@@ -1,20 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=\, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="index.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Card Game Tracker</title>
+  <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <div id="main-page">
-        <div id="welcome">
-            <h1>welcome</h1>
-        </div>
-        <div id="buttons">
-            <button>Add Game</button>
-            <button>Join Game</button>
-        </div>
+  <div id="main-page">
+    <div id="welcome">
+      <h1>Welcome</h1>
     </div>
+    <div id="buttons">
+      <button id="addGameBtn">Add Game</button>
+      <button id="joinGameBtn">Join Game</button>
+    </div>
+  </div>
+
+  <!-- Modal Form -->
+  <div id="addGameModal" style="display: none;">
+    <h2>Create New Game</h2>
+    <form id="gameForm">
+      <label>Players (comma separated):</label><br>
+      <input type="text" id="playersInput" placeholder="e.g., Abhinay, Ram, Sneha" required><br><br>
+
+      <label>Starting Amount for Game:</label><br>
+      <input type="number" id="amountInput" placeholder="e.g., 500" required><br><br>
+
+      <button type="submit">Create Game</button>
+      <button type="button" onclick="closeModal()">Cancel</button>
+    </form>
+  </div>
+
+  <script type="module" src="index.js"></script>
 </body>
 </html>
