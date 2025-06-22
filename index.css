@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  width: 100%;
+}
+
+#main-page {
+  display: flex;
+  flex-direction: column; /* vertical stacking */
+  height: 100vh; /* full screen height */
+  width: 100vw;  /* full screen width */
+  border: 2px solid red;
+}
+
+#welcome, #buttons {
+  flex: 2;
+  border: 2px solid green; 
+  margin: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#welcome{
+    flex: 1;
+}
+#welcome h1 {
+  font-size: 7rem;
+}
+
+#buttons button {
+  margin: 0 10px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 20px;
+}
